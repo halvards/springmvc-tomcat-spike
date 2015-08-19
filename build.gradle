@@ -1,6 +1,4 @@
 apply plugin: 'application'     // http://www.gradle.org/docs/current/userguide/application_plugin.html
-apply plugin: 'eclipse'         // http://www.gradle.org/docs/current/userguide/eclipse_plugin.html
-apply plugin: 'idea'            // http://www.gradle.org/docs/current/userguide/idea_plugin.html
 apply plugin: 'java'            // http://www.gradle.org/docs/current/userguide/java_plugin.html
 
 def javaVersion = '1.8'
@@ -50,12 +48,3 @@ task wrapper(type: Wrapper) {
     gradleVersion = '2.6'
 }
 
-idea.module {
-    downloadSources = true
-    downloadJavadoc = false
-}
-
-idea.project {
-    jdkName javaVersion
-    languageLevel javaVersion
-}
