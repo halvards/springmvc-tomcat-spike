@@ -38,6 +38,7 @@ public class HelloWorldControllerIT {
                 .url("http://localhost:" + port + "/app/hello")
                 .build();
         Response response = client.newCall(request).execute();
+        assertThat(response.code(), equalTo(200));
         assertThat(response.body().string(), equalTo("Hello world"));
     }
 
