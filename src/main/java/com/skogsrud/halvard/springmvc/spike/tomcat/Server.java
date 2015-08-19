@@ -21,7 +21,7 @@ public class Server {
         tomcat = new Tomcat();
         tomcat.setPort(port);
         tomcat.setBaseDir(System.getProperty("java.io.tmpdir"));
-        tomcat.addWebapp("/app", new File("src/main/webapp").getAbsolutePath());
+        tomcat.addWebapp("/app", new File(System.getProperty("java.io.tmpdir")).getAbsolutePath());
     }
 
     /**
@@ -37,10 +37,15 @@ public class Server {
      */
     public void start() throws Exception {
         tomcat.start();
+
     }
 
     public void stop() throws Exception {
-        tomcat.stop();
+        try {
+            tomcat.stop();
+        } finally {
+            tomcat.destroy();
+        }
     }
 
     private static int getPort() throws IOException {
