@@ -1,4 +1,4 @@
-# springmvc-tomcat-spike
+# springmvc-tomcat-spike [![Travis CI Build Status](https://travis-ci.org/halvards/springmvc-tomcat-spike.svg?branch=master)](https://travis-ci.org/halvards/springmvc-tomcat-spike) [![Snap CI Build Status](https://snap-ci.com/halvards/springmvc-tomcat-spike/branch/master/build_image)](https://snap-ci.com/halvards/springmvc-tomcat-spike/branch/master)
 
 Spike to work out what's required to run a Spring MVC application using embedded Tomcat, where the application is configured only with code and annotations, no XML files.
 
