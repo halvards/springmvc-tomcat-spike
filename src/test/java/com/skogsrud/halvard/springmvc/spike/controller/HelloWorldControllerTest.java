@@ -39,9 +39,7 @@ public class HelloWorldControllerTest {
                 .build();
         Response response = client.newCall(request).execute();
         assertThat(response.code(), equalTo(200));
-        String body = response.body().string();
-        System.out.println("body = " + body);
-        assertThat(body, equalTo("Hello world"));
+        assertThat(response.body().string(), equalTo("Hello world"));
     }
 
     private static int findRandomOpenPort() throws IOException {
