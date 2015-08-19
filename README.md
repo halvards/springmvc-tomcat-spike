@@ -6,6 +6,6 @@ After launch, you should be able to go to <http://localhost:8080/app/hello> and 
 
 The application port can be controlled using the `PORT` environment variable.
 
-Run the tests using `./gradlew clean test`.
+Run the tests using `./gradlew clean test` or `mvn clean verify`.
 
-Build a jar with all dependencies using `./gradlew onejar`.
+Build an executable jar complete with all dependencies using `./gradlew clean onejar` or `mvn clean compile assembly:single`.
