@@ -14,7 +14,7 @@ import java.net.ServerSocket;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.junit.Assert.assertThat;
 
-public class HelloWorldControllerIT {
+public class HelloWorldControllerTest {
     private static Server server;
     private static int port;
     private static OkHttpClient client;
@@ -39,7 +39,9 @@ public class HelloWorldControllerIT {
                 .build();
         Response response = client.newCall(request).execute();
         assertThat(response.code(), equalTo(200));
-        assertThat(response.body().string(), equalTo("Hello world"));
+        String body = response.body().string();
+        System.out.println("body = " + body);
+        assertThat(body, equalTo("Hello world"));
     }
 
     private static int findRandomOpenPort() throws IOException {
