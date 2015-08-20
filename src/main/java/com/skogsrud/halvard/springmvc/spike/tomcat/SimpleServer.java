@@ -12,7 +12,7 @@ public class SimpleServer {
         Tomcat tomcat = new Tomcat();
         tomcat.setPort(8080);
         tomcat.setBaseDir(System.getProperty("java.io.tmpdir"));
-        tomcat.addWebapp("/app", new File(System.getProperty("java.io.tmpdir")).getAbsolutePath());
+        tomcat.addWebapp("/app", new File("src/main/webapp").getAbsolutePath());
         tomcat.start();
         tomcat.getServer().await();
     }
