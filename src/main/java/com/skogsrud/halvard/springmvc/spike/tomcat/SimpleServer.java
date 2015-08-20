@@ -5,7 +5,7 @@ import org.apache.catalina.startup.Tomcat;
 import java.io.File;
 
 /**
- * A simpler alternative to the Server class.
+ * A simpler alternative to the Server class if a programmatic way to stop the server isn't required.
  */
 public class SimpleServer {
     public static void main(String[] args) throws Exception {

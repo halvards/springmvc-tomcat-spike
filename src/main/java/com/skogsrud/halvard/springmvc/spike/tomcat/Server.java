@@ -5,6 +5,9 @@ import org.apache.catalina.startup.Tomcat;
 import java.io.File;
 import java.io.IOException;
 
+/**
+ * Run the application. Allows for programmatic starting and stopping, e.g., for use in test setup/teardown.
+ */
 public class Server {
     private static final int DEFAULT_PORT = 8080;
     private final Tomcat tomcat;
